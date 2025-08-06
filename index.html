@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>UEFA Champions League</title>
+  <link href="css/tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="border-b border-sky-800 py-4">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+      <h1 class="text-3xl font-bold text-center mb-4 md:mb-0">UEFA Champions League</h1>
+      
+      <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+        <a href="index.html" class="nav-btn active">🏆 League</a>
+        <a href="players.html" class="nav-btn">📊 Player Stats</a>
+        <a href="fixtures.html" class="nav-btn">📅 Fixtures</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container mx-auto px-4 py-8 flex-grow">
+    <!-- League Table -->
+    <section class="card mb-8">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-semibold">League Table</h2>
+        <div id="table-actions"></div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="league-table w-full">
+          <thead>
+            <tr>
+              <th>Pos</th>
+              <th>Team</th>
+              <th>Pl</th>
+              <th>W</th>
+              <th>D</th>
+              <th>L</th>
+              <th>GF</th>
+              <th>GA</th>
+              <th>GD</th>
+              <th>Pts</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="league-table">
+            <!-- JS renders rows here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- News Feed -->
+    <section class="card">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-semibold">News Feed</h2>
+        <div id="news-actions"></div>
+      </div>
+      <div id="news-feed">
+        <!-- JS renders .news-item blocks -->
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm border-t border-slate-700">
+  </footer>
+
+  <button id="admin-btn" class="admin-btn">Admin Login</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

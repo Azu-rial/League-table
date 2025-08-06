@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Player Stats - UEFA Champions League</title>
+  <link href="css/tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+
+  <header class="border-b border-sky-800 py-4">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+      <h1 class="text-3xl font-bold text-center mb-4 md:mb-0">UEFA Champions League</h1>
+      
+      <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+        <a href="index.html" class="nav-btn">🏆 League</a>
+        <a href="players.html" class="nav-btn active">📊 Player Stats</a>
+        <a href="fixtures.html" class="nav-btn">📅 Fixtures</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container mx-auto px-4 py-8 flex-grow">
+    <h1 class="text-3xl font-bold text-center mb-8">Player Statistics</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Goalscorers -->
+      <section class="card">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-semibold">Top Goalscorers</h2>
+          <div class="goals-actions"></div>
+        </div>
+        <div id="goals-list"><!-- JS injects .leaderboard-item --></div>
+      </section>
+
+      <!-- Assists -->
+      <section class="card">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-semibold">Top Assists</h2>
+          <div class="assists-actions"></div>
+        </div>
+        <div id="assists-list"></div>
+      </section>
+
+      <!-- Tackles -->
+      <section class="card">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-semibold">Most Tackles</h2>
+          <div class="tackles-actions"></div>
+        </div>
+        <div id="tackles-list"></div>
+      </section>
+
+      <!-- Saves -->
+      <section class="card">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-semibold">Most Saves</h2>
+          <div class="saves-actions"></div>
+        </div>
+        <div id="saves-list"></div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="text-center py-6 text-gray-500 text-sm border-t border-slate-700">
+    Created by azurial
+  </footer>
+
+  <button id="admin-btn" class="admin-btn">Admin Login</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

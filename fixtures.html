@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Fixtures - UEFA Champions League</title>
+  <link href="css/tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+
+  <header class="border-b border-sky-800 py-4">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+      <h1 class="text-3xl font-bold text-center mb-4 md:mb-0">UEFA Champions League</h1>
+      
+      <nav class="flex gap-4 md:gap-6 flex-wrap justify-center">
+        <a href="index.html" class="nav-btn">🏆 League</a>
+        <a href="players.html" class="nav-btn">📊 Player Stats</a>
+        <a href="fixtures.html" class="nav-btn active">📅 Fixtures</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container mx-auto px-4 py-8 flex-grow">
+    <h1 class="text-3xl font-bold text-center mb-8">Match Fixtures</h1>
+
+    <section class="card mb-8">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-semibold">Upcoming Matches</h2>
+        <div class="upcoming-actions"></div>
+      </div>
+      <div id="upcoming-list"><!-- JS injects .fixture-item --></div>
+    </section>
+
+    <section class="card">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-semibold">Past Results</h2>
+        <div class="results-actions"></div>
+      </div>
+      <div id="results-list"></div>
+    </section>
+  </div>
+
+  <footer class="text-center py-6 text-gray-500 text-sm border-t border-slate-700">
+    Created by azurial
+  </footer>
+
+  <button id="admin-btn" class="admin-btn">Admin Login</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
