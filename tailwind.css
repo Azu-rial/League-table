@@ -1,0 +1,235 @@
+/* Base Styles */
+body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Navigation */
+.nav-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+}
+
+.nav-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  color: white;
+}
+
+.nav-btn.active {
+  background: rgba(56, 189, 248, 0.3);
+  color: white;
+}
+
+/* Cards */
+.card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+/* League Table */
+table.league-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table.league-table th {
+  padding: 1rem;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  background: rgba(15, 23, 42, 0.8);
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+}
+
+table.league-table td {
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.5);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+table.league-table tbody tr:first-child td {
+  background: rgba(8, 145, 178, 0.3);
+}
+
+table.league-table tbody tr:nth-child(even) td {
+  background: rgba(30, 41, 59, 0.3);
+}
+
+/* News Items */
+.news-item {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.news-item img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Leaderboard & Fixture Items */
+.leaderboard-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.5);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.fixture-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.5);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.leaderboard-item:hover,
+.fixture-item:hover {
+  background: rgba(30, 41, 59, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Admin button */
+.admin-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #0ea5e9;
+  color: #1e293b;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.admin-btn:hover {
+  background: #0284c7;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Elements */
+input, textarea, select {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  color: white;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+button:not(.admin-btn) {
+  background: rgba(56, 189, 248, 0.3);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:not(.admin-btn):hover {
+  background: rgba(56, 189, 248, 0.5);
+}
+
+/* Team Logos */
+.team-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .nav-btn {
+    padding: 0.5rem;
+    min-width: auto;
+    font-size: 0.875rem;
+  }
+  
+  .fixture-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .admin-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  table.league-table th, 
+  table.league-table td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+}
